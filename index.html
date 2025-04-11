@@ -53,9 +53,9 @@
         </div>
         <div class="cart-controls">
           <div class="quantity-selector">
-            <button class="minus">-</button>
-            <span class="quantity">0</span>
-            <button class="plus">+</button>
+            <button id="minus">-</button>
+            <span id="quantity">0</span>
+            <button id="plus">+</button>
           </div>
           <button class="add-to-cart">
             <img src="images/icon-cart.svg" alt="Cart Icon" /> Add to cart
@@ -133,7 +133,7 @@
   }
   .brand {
     text-transform: uppercase;
-    color: #ff7d1a;
+    color: #555;
     font-size: 0.9rem;
   }
   .product-title {
@@ -152,8 +152,8 @@
     font-weight: bold;
   }
   .discount {
-    background-color: #ffede0;
-    color: #ff7d1a;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
     margin-left: 1rem;
@@ -199,5 +199,46 @@
   }
   .add-to-cart:hover {
     background-color: #ffa15d;
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .product-page {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .gallery,
+    .product-details {
+      flex: 1 1 100%;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .quantity-selector {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .cart-controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 </style>
