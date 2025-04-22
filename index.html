@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="logo">Sneakers</div>
+      <div class="logo">sneakers</div>
       <nav class="nav-links">
         <a href="#">Collections</a>
         <a href="#">Men</a>
@@ -90,6 +90,14 @@
     margin: 0 1rem;
     color: #666;
     text-decoration: none;
+    padding-bottom: 4.2%;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: black;
+    transition: 0.7s;
+    border-bottom-color: #ff7d1a;
   }
   .cart-profile {
     display: flex;
@@ -105,16 +113,17 @@
   .product-page {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    max-width: 850px;
     margin: 2rem auto;
     gap: 3rem;
-    padding: 1rem;
   }
   .gallery {
     flex: 1 1 400px;
+    position: relative;
+    left: 80px;
   }
   .main-img {
-    width: 100%;
+    width: 72%;
     border-radius: 10px;
   }
   .thumbnails {
@@ -130,6 +139,7 @@
   }
   .product-details {
     flex: 1 1 400px;
+    scale: 80%;
   }
   .brand {
     text-transform: uppercase;
@@ -178,6 +188,7 @@
     gap: 1rem;
   }
   .quantity-selector button {
+    font-weight: 600;
     background-color: transparent;
     border: none;
     font-size: 1.2rem;
@@ -186,7 +197,8 @@
   }
   .add-to-cart {
     background-color: #ff7d1a;
-    color: #fff;
+    font-weight: bold;
+    color: #000000;
     border: none;
     border-radius: 8px;
     padding: 0.8rem 2rem;
@@ -198,7 +210,11 @@
     transition: background 0.3s ease;
   }
   .add-to-cart:hover {
-    background-color: #ffa15d;
+    background-color: #ff8e3d;
+  }
+  .add-to-cart img {
+    filter: brightness(0%);
+    width: 15%;
   }
   @media (max-width: 768px) {
     .navbar {
